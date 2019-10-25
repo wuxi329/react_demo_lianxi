@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { observer } from "mobx-react";
+import { Link } from "react-router-dom";
+
+import Header from '@/components/header'
 import '@/assets/css/HelloWorld.less';
-import { Button } from 'antd-mobile';
 
 @observer
 class HelloWorld extends Component {
@@ -14,8 +16,13 @@ class HelloWorld extends Component {
   }
   render() {
     return (
-      <h2 className="title">Old React.Component
-      <Button>121212</Button></h2>
+      <div>
+        <Header title="目录" leftIcon="false" />
+        <div>
+          <h5>模块1</h5>
+          <Link to="/page1" className="list_item">跳转page1</Link>
+        </div>
+      </div>
     )
   }
 }

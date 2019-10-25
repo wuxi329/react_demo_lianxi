@@ -3,6 +3,8 @@ import { Provider } from 'mobx-react';
 import ReactDOM from 'react-dom';
 import FastClick from 'fastclick';
 import '@/assets/css/reset.css';
+import '@/assets/css/common.less';
+import history  from '@/router/history';
 import Router from '@/router';
 import * as serviceWorker from './serviceWorker';
 
@@ -21,7 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 ReactDOM.render(
   <Provider>
-    <Router />
+    <Router history={history} />
   </Provider>,
   document.getElementById('root')
 );
